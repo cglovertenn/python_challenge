@@ -53,6 +53,7 @@ with open(budget_data_csv, 'r') as file:
     header = next(csvreader)
     analysis = getthestuff(csvreader)
 
+# Print results
 print(f"""
 Financial Analysis
 -------------------------------
@@ -66,7 +67,7 @@ Greatest Decrease in Profit: {analysis[6]} ${analysis[3]}
 # Set output file path
 data_output = os.path.join("pybank_output.csv")
 
-# Save the stuff to a text file
+# Save and print to a text file
 with open(data_output, "w", newline="") as csvfile:
     writer = csv.writer(csvfile)
     writer.writerow([(f"""
@@ -78,3 +79,5 @@ Average Change: ${analysis[4]}
 Greatest Increase in Profit: {analysis[5]} ${analysis[2]}
 Greatest Decrease in Profit: {analysis[6]} ${analysis[3]}
 """)]) 
+
+## That's All Folks !
