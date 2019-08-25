@@ -39,7 +39,7 @@ def getthestuff(csv):
             minmonth = current_month
 
         lastmonth = current_pnl
-    avgchange = sum(changes)/len(changes)
+    avgchange = round(sum(changes)/len(changes), 2)
     return [months, total, maxrev, minrev, avgchange, maxmonth, minmonth]
 
 # Set source file path
