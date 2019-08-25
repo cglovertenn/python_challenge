@@ -48,12 +48,12 @@ election_data_csv = os.path.join("election_data.csv")
 # Open source file
 with open(election_data_csv, 'r') as file:
 
-# Read source file and print results
+# Read source file
     csvreader = csv.reader(file, delimiter=",")
     header = next(csvreader)
     analysis = datafetch(csvreader)
 
-#print results
+# Print results
 print(f"""
 Election Results
 -------------------------
